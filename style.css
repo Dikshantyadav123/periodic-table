@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.21s;
+}
+
+*::selection {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+@font-face {
+    font-family: a;
+    src: url(font1.TTF);
+}
+body {
+    background-color: #13011e;
+    color: rgb(255, 255, 255);
+}
+
+.main {
+    width: 100vw;
+}
+
+
+/* ==== PAGE 2 ======== */
+/* ==================== */
+
+.page1 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart {
+    position: relative;
+    height: 90vh;
+    width: 96%;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    padding-bottom: 10px;
+    gap: 1px;
+    overflow: hidden;
+    border-radius: 2vw;
+    padding: 2vw;
+    background-image: url("kali wallpaper.jpg");
+    /* background-color:cyan; */
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(1px);
+}
+.cover {
+    position: absolute;
+    width: 40vw;
+    min-height: 5vh;
+    background-color: #0040af60;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-70%);
+    /* overflow: hidden; */
+    border-bottom-left-radius:1vw ;border-bottom-right-radius:1vw ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2px;
+    padding: 1vh 1vw;
+    backdrop-filter: blur(2px);
+}
+.cover-box{
+    position: relative;
+    background-color: #fff;
+    width:2.5vw ;
+    height:2.5vw;
+    border-radius: 50%;
+    margin: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover-number-1{
+    background-color: #0d7997;
+}
+.cover-number-2{
+    background-color: rgba(4, 160, 22, 0.501);
+}
+.cover-number-3{
+    background-color: #ffff00b4;;
+}
+.cover-number-4{
+    background-color:rgb(163, 60, 171);
+}
+.cover-number-5{
+    background-color: rgb(51, 158, 72);
+}
+.cover-number-6{
+    background-color: rgba(85, 220, 241, 0.666);
+}
+.cover-number-7{
+    background-color: rgba(26, 26, 203, 0.792);
+}
+.cover-number-8{
+    background-color: #6b3324e3;
+}
+.cover-box:hover .cover-box-text {
+   display: block;
+   width: auto;
+   opacity: 1;
+   padding: 1vw;
+   transition: all ease 1s;
+   height: auto;
+   border-radius: 1vw;
+   backdrop-filter: blur(3px);
+}
+.cover-box:hover {
+    border: 2px solid black;
+}
+.cover-box-text{
+    position: absolute;
+    top: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0%;
+    margin: 1px;
+    /* display: none; */
+    width: 0;overflow: hidden;
+    opacity: 0;
+    transition: opacity ease-in 2s;
+    
+}
+.cover-box-text h1{
+    font-family: a ;
+    text-transform: capitalize;
+    font-weight: 100;
+    font-size: 2vw;
+}
+
+
+.chart-group {
+    height: 100%;
+    width: 5vw;
+    background-color: #cc303011;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.chart-period {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 0.6vw;
+    background-color: #0f043a33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: "Impact Regular";
+    /* backdrop-filter: blur(10px); */
+}
+
+.chart-period h1:hover {
+    font-size: 1.8vw;
+}
+
+.chart-period:hover {
+    box-shadow: inset 8px 8px 14px black;
+}
+
+.chart-period-number-7 {
+    margin-bottom: 20px;
+}
+
+.chart-period-number-7 {
+    background-color: #ff0000a8;
+}
+
+.chart-period-number-0 {
+    background-color: #004169c6;
+    margin-bottom: 20px;
+}
+
+.chart-period h1 {
+    cursor: pointer;
+    width: 100%;
+    line-height: 4vw;
+    font-style: italic;
+    font-size: 2vw;
+    /* background-color: #00fff772; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.chart-group-number-3 .chart-period:nth-child(2),
+.chart-group-number-3 .chart-period:nth-child(3),
+.chart-group-number-4 .chart-period:nth-child(2),
+.chart-group-number-4 .chart-period:nth-child(3),
+.chart-group-number-4 .chart-period:nth-child(4),
+.chart-group-number-4 .chart-period:nth-child(5),
+.chart-group-number-5 .chart-period:nth-child(2),
+.chart-group-number-5 .chart-period:nth-child(3),
+.chart-group-number-5 .chart-period:nth-child(4),
+.chart-group-number-5 .chart-period:nth-child(5),
+.chart-group-number-6 .chart-period:nth-child(2),
+.chart-group-number-6 .chart-period:nth-child(3),
+.chart-group-number-6 .chart-period:nth-child(4),
+.chart-group-number-6 .chart-period:nth-child(5),
+.chart-group-number-7 .chart-period:nth-child(2),
+.chart-group-number-7 .chart-period:nth-child(3),
+.chart-group-number-7 .chart-period:nth-child(4),
+.chart-group-number-7 .chart-period:nth-child(5),
+.chart-group-number-8 .chart-period:nth-child(2),
+.chart-group-number-8 .chart-period:nth-child(3),
+.chart-group-number-8 .chart-period:nth-child(4),
+.chart-group-number-8 .chart-period:nth-child(5),
+.chart-group-number-9 .chart-period:nth-child(2),
+.chart-group-number-9 .chart-period:nth-child(3),
+.chart-group-number-9 .chart-period:nth-child(4),
+.chart-group-number-9 .chart-period:nth-child(5),
+.chart-group-number-10 .chart-period:nth-child(2),
+.chart-group-number-10 .chart-period:nth-child(3),
+.chart-group-number-10 .chart-period:nth-child(4),
+.chart-group-number-10 .chart-period:nth-child(5),
+.chart-group-number-11 .chart-period:nth-child(2),
+.chart-group-number-11 .chart-period:nth-child(3),
+.chart-group-number-11 .chart-period:nth-child(4),
+.chart-group-number-11 .chart-period:nth-child(5),
+.chart-group-number-12 .chart-period:nth-child(2),
+.chart-group-number-12 .chart-period:nth-child(3),
+.chart-group-number-12 .chart-period:nth-child(4),
+.chart-group-number-12 .chart-period:nth-child(5) {
+    background-color: #ffff00b4;
+    color: #000000;
+    /* backdrop-filter: blur(2px); */
+    
+}
+
+.chart-group-number-14 .chart-period:nth-child(2),
+.chart-group-number-15 .chart-period:nth-child(2),
+.chart-group-number-15 .chart-period:nth-child(3),
+.chart-group-number-16 .chart-period:nth-child(2),
+.chart-group-number-16 .chart-period:nth-child(3),
+.chart-group-number-16 .chart-period:nth-child(4) {
+    background-color: rgba(85, 220, 241, 0.756);
+    color: #000000;
+    /* backdrop-filter: blur(2px); */
+}
+
+.chart-group-number-18 .chart-period:nth-child(2),
+.chart-group-number-18 .chart-period:nth-child(3),
+.chart-group-number-18 .chart-period:nth-child(4),
+.chart-group-number-18 .chart-period:nth-child(5),
+.chart-group-number-18 .chart-period:nth-child(6),
+.chart-group-number-18 .chart-period:nth-child(7),
+.chart-group-number-18 .chart-period:nth-child(8) {
+    background-color: rgba(233, 75, 12, 0.501);
+    color: #000000;
+    /* backdrop-filter: blur(2px); */
+}
+
+.chart-group-number-13 .chart-period:nth-child(2),
+.chart-group-number-14 .chart-period:nth-child(3),
+.chart-group-number-14 .chart-period:nth-child(4),
+.chart-group-number-15 .chart-period:nth-child(4),
+.chart-group-number-15 .chart-period:nth-child(5),
+.chart-group-number-16 .chart-period:nth-child(5),
+.chart-group-number-16 .chart-period:nth-child(6) {
+    background-color: rgba(12, 233, 64, 0.501);
+    color: #000000;
+    /* backdrop-filter: blur(2px); */
+}
+
+.chart-group-number-13 .chart-period:nth-child(3),
+.chart-group-number-13 .chart-period:nth-child(4),
+.chart-group-number-13 .chart-period:nth-child(5),
+.chart-group-number-13 .chart-period:nth-child(6),
+.chart-group-number-13 .chart-period:nth-child(7),
+.chart-group-number-14 .chart-period:nth-child(5),
+.chart-group-number-14 .chart-period:nth-child(6),
+.chart-group-number-14 .chart-period:nth-child(7),
+.chart-group-number-15 .chart-period:nth-child(6),
+.chart-group-number-15 .chart-period:nth-child(7),
+.chart-group-number-16 .chart-period:nth-child(7) {
+    background-color: rgba(207, 12, 233, 0.501);
+    color: #000000;
+    /* backdrop-filter: blur(2px); */
+}
+
+.chart-group-number-17 .chart-period:nth-child(2),
+.chart-group-number-17 .chart-period:nth-child(3),
+.chart-group-number-17 .chart-period:nth-child(4),
+.chart-group-number-17 .chart-period:nth-child(5),
+.chart-group-number-17 .chart-period:nth-child(6),
+.chart-group-number-17 .chart-period:nth-child(7) {
+    background-color: rgba(31, 12, 233, 0.501);
+    color: #000000;
+    /* backdrop-filter: blur(2px); */
+}
+
+.chart-group-number-1 .chart-period:nth-child(2),
+.chart-group-number-1 .chart-period:nth-child(3),
+.chart-group-number-1 .chart-period:nth-child(4),
+.chart-group-number-1 .chart-period:nth-child(5),
+.chart-group-number-1 .chart-period:nth-child(6),
+.chart-group-number-1 .chart-period:nth-child(7),
+.chart-group-number-1 .chart-period:nth-child(8) {
+    background-color: rgba(12, 200, 233, 0.501);
+    color: #000000;
+    /* backdrop-filter: blur(2px); */
+}
+
+.chart-group-number-2 .chart-period:nth-child(2),
+.chart-group-number-2 .chart-period:nth-child(3),
+.chart-group-number-2 .chart-period:nth-child(4),
+.chart-group-number-2 .chart-period:nth-child(5),
+.chart-group-number-2 .chart-period:nth-child(6),
+.chart-group-number-2 .chart-period:nth-child(7) {
+    background-color: rgba(4, 160, 22, 0.501);
+    color: #000000;
+    /* backdrop-filter: blur(2px); */
+}
+ /*=====================================================  */
+/* =====  HOVER ======================================== */
+.chart-group-number-14 .chart-period:nth-child(2):hover,
+.chart-group-number-15 .chart-period:nth-child(2):hover,
+.chart-group-number-15 .chart-period:nth-child(3):hover,
+.chart-group-number-16 .chart-period:nth-child(2):hover,
+.chart-group-number-16 .chart-period:nth-child(3):hover,
+.chart-group-number-16 .chart-period:nth-child(4):hover {
+    background-color: #ff0000;
+    box-shadow: inset 8px 8px 14px rgb(35, 35, 35);
+    color: #ffffff;
+}
+
+.chart-group-number-0 div:nth-child(5):hover {
+    background-color: #08820e;
+}
+
+.chart-period:hover {
+    background-color: #fff;
+    color: #060024;
+}
