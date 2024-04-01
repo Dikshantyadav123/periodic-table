@@ -1,423 +1,1654 @@
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PERIODIC TABLE</title>
-    <meta name="description" content="This is mordern periodic table. With animation and property" />
-    <meta name="keywords" content="three.js, tutorial, particles, interactive, javascript, webgl" />
+    <meta
+      name="description"
+      content="This is mordern periodic table. With animation and property"
+    />
+    <meta
+      name="keywords"
+      content="three.js, tutorial, particles, interactive, javascript, webgl"
+    />
     <meta name="author" content="Dikshant Yadav" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<body>
-    <div class="main">
-        <!-- ====== PAGE 1 START =============== -->
-        <div class="page1">
-            <div class="chart">
-                <div class="cover">
-                    <div class="cover-box cover-number-1"><div class="cover-box-text">
-                        <h1>alkali metal</h1>
-                    </div></div>
-                    <div class="cover-box cover-number-2"><div class="cover-box-text"><h1>alkali earth metal</h1></div></div>
-                    <div class="cover-box cover-number-3"><div class="cover-box-text"><h1>transition metal</h1></div></div>
-                    <div class="cover-box cover-number-4"><div class="cover-box-text"><h1>metal</h1></div></div>
-                    <div class="cover-box cover-number-5"><div class="cover-box-text"><h1>matalloids</h1></div></div>
-                    <div class="cover-box cover-number-6"><div class="cover-box-text"><h1>non metal</h1></div></div>
-                    <div class="cover-box cover-number-7"><div class="cover-box-text"><h1>halogens</h1></div></div>
-                    <div class="cover-box cover-number-8"><div class="cover-box-text"><h1>noble gases</h1></div></div>
-                    </div>
-                <div class="chart-group chart-group-number-0">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>no</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-1">
-                        <h1>1</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-2">
-                        <h1>2</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-3">
-                        <h1>3</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>4</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>5</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>6</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>7</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-1">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>1</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-1">
-                        <h1>h</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-2">
-                        <h1>li</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-3">
-                        <h1>na</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>k</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>rb</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>cs</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>fr</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-2">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>2</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-2">
-                        <h1>be</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-3">
-                        <h1>mg</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>ca</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>sr</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>ba</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>ra</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-3">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>3</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>sc</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>y</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1></h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1></h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-4">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>4</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>ti</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>zr</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>hf</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>rf</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-5">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>5</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>v</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>nb</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>ta</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>db</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-6">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>6</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>cr</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>mo</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>w</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>sg</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-7">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>7</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>mn</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>tc</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>re</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>bh</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-8">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>8</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>fe</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>ru</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>os</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>hs</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-9">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>9</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>co</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>rh</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>ir</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>mt</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-10">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>10</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>ni</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>pd</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>pt</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>ds</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-11">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>11</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>cu</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>ag</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>au</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>rg</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-12">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>12</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>zn</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>cd</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>hg</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>cn</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-13">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>13</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-2">
-                        <h1>b</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-3">
-                        <h1>al</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>ga</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>in</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>tl</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>nh</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-14">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>14</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-2">
-                        <h1>c</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-3">
-                        <h1>si</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>ge</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>sn</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>pb</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>fl</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-15">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>15</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-2">
-                        <h1>n</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-3">
-                        <h1>p</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>as</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>sb</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>bi</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>mc</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-16">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>16</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-2">
-                        <h1>o</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-3">
-                        <h1>s</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>se</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>te</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>po</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>lv</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-17">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>17</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-2">
-                        <h1>f</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-3">
-                        <h1>cl</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>b</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>i</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>at</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>ts</h1>
-                    </div>
-                </div>
-                <div class="chart-group chart-group-number-18">
-                    <div class="chart-period chart-period-number-0">
-                        <h1>18</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-1">
-                        <h1>he</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-2">
-                        <h1>ne</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-3">
-                        <h1>ar</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-4">
-                        <h1>kr</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-5">
-                        <h1>ke</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-6">
-                        <h1>rn</h1>
-                    </div>
-                    <div class="chart-period chart-period-number-7">
-                        <h1>og</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <body>
+    <div class="theory">
+      <div class="theory-cross">
+        
+      </div>
+      <div class="theory-box"></div>
     </div>
-
+    
+    <div class="main">
+      <!-- ===== SHOW CARD ============== -->
+      <div class="show-card">
+        <div class="show-box">
+          <div class="show-box-h"></div>
+          <div class="show-box-p"></div>
+          <div class="show-box-f"></div>
+        </div>
+      </div>
+      <!-- ====== PAGE 1 START =============== -->
+      <div class="page1">
+        <div class="chart">
+          <div class="cover">
+            <div class="cover-box cover-number-1">
+              <div class="cover-box-text">
+                <h1>alkali metal</h1>
+              </div>
+            </div>
+            <div class="cover-box cover-number-2">
+              <div class="cover-box-text">
+                <h1>alkali earth metal</h1>
+              </div>
+            </div>
+            <div class="cover-box cover-number-3">
+              <div class="cover-box-text">
+                <h1>transition metal</h1>
+              </div>
+            </div>
+            <div class="cover-box cover-number-4">
+              <div class="cover-box-text">
+                <h1>metal</h1>
+              </div>
+            </div>
+            <div class="cover-box cover-number-5">
+              <div class="cover-box-text">
+                <h1>matalloids</h1>
+              </div>
+            </div>
+            <div class="cover-box cover-number-6">
+              <div class="cover-box-text">
+                <h1>non metal</h1>
+              </div>
+            </div>
+            <div class="cover-box cover-number-7">
+              <div class="cover-box-text">
+                <h1>halogens</h1>
+              </div>
+            </div>
+            <div class="cover-box cover-number-8">
+              <div class="cover-box-text">
+                <h1>noble gases</h1>
+              </div>
+            </div>
+          </div>
+          <!-- ===================================================================== -->
+          <!-- ======== CHART GROUP NO >> 0 ========================================= -->
+          <div class="chart-group chart-group-number-0">
+            <div
+              data-block="period-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="no"
+              data-atomicNumber="no"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>no</h1>
+            </div>
+            <div
+              data-block="period-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="1"
+              data-atomicNumber="1"
+              class="chart-period chart-period-number-1"
+            >
+              <h1>1</h1>
+            </div>
+            <div
+              data-block="period-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="2"
+              data-atomicNumber="2"
+              class="chart-period chart-period-number-2"
+            >
+              <h1>2</h1>
+            </div>
+            <div
+              data-block="period-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="3"
+              data-atomicNumber="3"
+              class="chart-period chart-period-number-3"
+            >
+              <h1>3</h1>
+            </div>
+            <div
+              data-block="period-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="4"
+              data-atomicNumber="4"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>4</h1>
+            </div>
+            <div
+              data-block="period-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="5"
+              data-atomicNumber="5"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>5</h1>
+            </div>
+            <div
+              data-block="period-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="6"
+              data-atomicNumber="6"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>6</h1>
+            </div>
+            <div
+              data-block="period-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="7"
+              data-atomicNumber="7"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>7</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-1">
+            <div
+              data-block="group-block"
+              data-color="blue"
+              data-head="group 1 "
+              data-paragraph="group 1 a"
+              data-foot=""
+              data-imageURL="photos/C.jpg"
+              data-atomicName="1"
+              data-atomicNumber="1 A"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>1</h1>
+            </div>
+            <div
+              data-block="alkali-metal"
+              data-color="green"
+              data-head="hydrogen"
+              data-paragraph="hydrogen is a gas"
+              data-foot="it is flamable"
+              data-imageURL="photos/B.jpg"
+              data-atomicName="h"
+              data-atomicNumber="1"
+              class="chart-period chart-period-number-1"
+            >
+              <h1>h</h1>
+            </div>
+            <div
+              data-block="alkali-metal"
+              data-color="green"
+              data-head="lithium"
+              data-paragraph="hydrogen is a gas"
+              data-foot="it is flamable"
+              data-imageURL="photos/A.jpg"
+              data-atomicName="li"
+              data-atomicNumber="3"
+              class="chart-period chart-period-number-2"
+            >
+              <h1>li</h1>
+            </div>
+            <div
+              data-block="alkali-metal"
+              data-color="green"
+              data-head="sodium"
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="na"
+              data-atomicNumber="11"
+              class="chart-period chart-period-number-3"
+            >
+              <h1>na</h1>
+            </div>
+            <div
+              data-block="alkali-metal"
+              data-color="green"
+              data-head="potassium"
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="k"
+              data-atomicNumber="19"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>k</h1>
+            </div>
+            <div
+              data-block="alkali-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="rb"
+              data-atomicNumber="37"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>rb</h1>
+            </div>
+            <div
+              data-block="alkali-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="cs"
+              data-atomicNumber="55"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>cs</h1>
+            </div>
+            <div
+              data-block="alkali-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="fr"
+              data-atomicNumber="87"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>fr</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-2">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="2"
+              data-atomicNumber="2 A"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>2</h1>
+            </div>
+            <div
+              data-block="alkali-earth-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="be"
+              data-atomicNumber="4"
+              class="chart-period chart-period-number-2"
+            >
+              <h1>be</h1>
+            </div>
+            <div
+              data-block="alkali-earth-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="mg"
+              data-atomicNumber="12"
+              class="chart-period chart-period-number-3"
+            >
+              <h1>mg</h1>
+            </div>
+            <div
+              data-block="alkali-earth-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ca"
+              data-atomicNumber="20"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>ca</h1>
+            </div>
+            <div
+              data-block="alkali-earth-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="sr"
+              data-atomicNumber="38"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>sr</h1>
+            </div>
+            <div
+              data-block="alkali-earth-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ba"
+              data-atomicNumber="56"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>ba</h1>
+            </div>
+            <div
+              data-block="alkali-earth-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ra"
+              data-atomicNumber="88"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>ra</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-3">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="3"
+              data-atomicNumber="3 B"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>3</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="sc"
+              data-atomicNumber="21"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>sc</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="y"
+              data-atomicNumber="39"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>y</h1>
+            </div>
+            <div
+              data-block="f-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName=""
+              data-atomicNumber=""
+              class="chart-period chart-period-number-6"
+            >
+              <h1></h1>
+            </div>
+            <div
+              data-block="f-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName=""
+              data-atomicNumber=""
+              class="chart-period chart-period-number-7"
+            >
+              <h1></h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-4">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="4"
+              data-atomicNumber="4 B"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>4</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ti"
+              data-atomicNumber="22"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>ti</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="zr"
+              data-atomicNumber="40"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>zr</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="hf"
+              data-atomicNumber="72"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>hf</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="rf"
+              data-atomicNumber="104"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>rf</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-5">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="5"
+              data-atomicNumber="5 B"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>5</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="v"
+              data-atomicNumber="23"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>v</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="nb"
+              data-atomicNumber="41"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>nb</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ta"
+              data-atomicNumber="73"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>ta</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="db"
+              data-atomicNumber="105"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>db</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-6">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="6"
+              data-atomicNumber="6 B"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>6</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="cr"
+              data-atomicNumber="24"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>cr</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="mo"
+              data-atomicNumber="42"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>mo</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="w"
+              data-atomicNumber="74"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>w</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="sg"
+              data-atomicNumber="106"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>sg</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-7">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="7"
+              data-atomicNumber="7 B"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>7</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="mn"
+              data-atomicNumber="25"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>mn</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="tc"
+              data-atomicNumber="43"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>tc</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="re"
+              data-atomicNumber="75"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>re</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="bh"
+              data-atomicNumber="107"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>bh</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-8">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="8"
+              data-atomicNumber="8"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>8</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="fe"
+              data-atomicNumber="26"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>fe</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ru"
+              data-atomicNumber="44"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>ru</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="os"
+              data-atomicNumber="76"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>os</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="hs"
+              data-atomicNumber="108"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>hs</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-9">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="9"
+              data-atomicNumber="8"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>9</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="co"
+              data-atomicNumber="27"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>co</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="rh"
+              data-atomicNumber="45"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>rh</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ir"
+              data-atomicNumber="77"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>ir</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="mt"
+              data-atomicNumber="109"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>mt</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-10">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="10"
+              data-atomicNumber="8"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>10</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ni"
+              data-atomicNumber="28"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>ni</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="pd"
+              data-atomicNumber="46"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>pd</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="pt"
+              data-atomicNumber="78"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>pt</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ds"
+              data-atomicNumber="110"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>ds</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-11">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="11"
+              data-atomicNumber="1 B"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>11</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="cu"
+              data-atomicNumber="29"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>cu</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ag"
+              data-atomicNumber="47"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>ag</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="au"
+              data-atomicNumber="79"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>au</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="rg"
+              data-atomicNumber="111"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>rg</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-12">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="12"
+              data-atomicNumber="2 B"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>12</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="zn"
+              data-atomicNumber="30"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>zn</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="cd"
+              data-atomicNumber="48"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>cd</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="hg"
+              data-atomicNumber="80"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>hg</h1>
+            </div>
+            <div
+              data-block="d-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="cn"
+              data-atomicNumber="112"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>cn</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-13">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="13"
+              data-atomicNumber="3 A"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>13</h1>
+            </div>
+            <div
+              data-block="metalloids"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="b"
+              data-atomicNumber="5"
+              class="chart-period chart-period-number-2"
+            >
+              <h1>b</h1>
+            </div>
+            <div
+              data-block="metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="al"
+              data-atomicNumber="13"
+              class="chart-period chart-period-number-3"
+            >
+              <h1>al</h1>
+            </div>
+            <div
+              data-block="metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ga"
+              data-atomicNumber="31"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>ga</h1>
+            </div>
+            <div
+              data-block="metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="in"
+              data-atomicNumber="49"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>in</h1>
+            </div>
+            <div
+              data-block="metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="tl"
+              data-atomicNumber="81"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>tl</h1>
+            </div>
+            <div
+              data-block="metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="nh"
+              data-atomicNumber="113"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>nh</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-14">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="14"
+              data-atomicNumber="4 A"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>14</h1>
+            </div>
+            <div
+              data-block="non-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="c"
+              data-atomicNumber="6"
+              class="chart-period chart-period-number-2"
+            >
+              <h1>c</h1>
+            </div>
+            <div
+              data-block="metalloids"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="si"
+              data-atomicNumber="14"
+              class="chart-period chart-period-number-3"
+            >
+              <h1>si</h1>
+            </div>
+            <div
+              data-block="metalloids"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ge"
+              data-atomicNumber="32"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>ge</h1>
+            </div>
+            <div
+              data-block="metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="sn"
+              data-atomicNumber="50"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>sn</h1>
+            </div>
+            <div
+              data-block="metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="pb"
+              data-atomicNumber="82"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>pb</h1>
+            </div>
+            <div
+              data-block="metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="fl"
+              data-atomicNumber="114"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>fl</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-15">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="15"
+              data-atomicNumber="5 A"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>15</h1>
+            </div>
+            <div
+              data-block="non-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="n"
+              data-atomicNumber="7"
+              class="chart-period chart-period-number-2"
+            >
+              <h1>n</h1>
+            </div>
+            <div
+              data-block="non-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="p"
+              data-atomicNumber="15"
+              class="chart-period chart-period-number-3"
+            >
+              <h1>p</h1>
+            </div>
+            <div
+              data-block="metalloids"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="as"
+              data-atomicNumber="33"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>as</h1>
+            </div>
+            <div
+              data-block="metalloids"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="sb"
+              data-atomicNumber="51"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>sb</h1>
+            </div>
+            <div
+              data-block="metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="bi"
+              data-atomicNumber="83"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>bi</h1>
+            </div>
+            <div
+              data-block="metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="mc"
+              data-atomicNumber="115"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>mc</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-16">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="16"
+              data-atomicNumber=" 6 A"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>16</h1>
+            </div>
+            <div
+              data-block="non-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="0"
+              data-atomicNumber="8"
+              class="chart-period chart-period-number-2"
+            >
+              <h1>o</h1>
+            </div>
+            <div
+              data-block="non-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="s"
+              data-atomicNumber="16"
+              class="chart-period chart-period-number-3"
+            >
+              <h1>s</h1>
+            </div>
+            <div
+              data-block="non-metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="se"
+              data-atomicNumber="34"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>se</h1>
+            </div>
+            <div
+              data-block="metalloids"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="te"
+              data-atomicNumber="52"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>te</h1>
+            </div>
+            <div
+              data-block="metalloids"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="po"
+              data-atomicNumber="84"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>po</h1>
+            </div>
+            <div
+              data-block="metal"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="lv"
+              data-atomicNumber="116"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>lv</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-17">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="17"
+              data-atomicNumber="7 A"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>17</h1>
+            </div>
+            <div
+              data-block="halogens"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="f"
+              data-atomicNumber="9"
+              class="chart-period chart-period-number-2"
+            >
+              <h1>f</h1>
+            </div>
+            <div
+              data-block="halogens"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="cl"
+              data-atomicNumber="17"
+              class="chart-period chart-period-number-3"
+            >
+              <h1>cl</h1>
+            </div>
+            <div
+              data-block="halogens"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="br"
+              data-atomicNumber="35"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>b</h1>
+            </div>
+            <div
+              data-block="halogens"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="i"
+              data-atomicNumber="53"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>i</h1>
+            </div>
+            <div
+              data-block="halogens"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="at"
+              data-atomicNumber="85"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>at</h1>
+            </div>
+            <div
+              data-block="halogens"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ts"
+              data-atomicNumber="117"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>ts</h1>
+            </div>
+          </div>
+          <div class="chart-group chart-group-number-18">
+            <div
+              data-block="group-block"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="18"
+              data-atomicNumber="0"
+              class="chart-period chart-period-number-0"
+            >
+              <h1>18</h1>
+            </div>
+            <div
+              data-block="noble-gases"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="he"
+              data-atomicNumber="2"
+              class="chart-period chart-period-number-1"
+            >
+              <h1>he</h1>
+            </div>
+            <div
+              data-block="noble-gases"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ne"
+              data-atomicNumber="10"
+              class="chart-period chart-period-number-2"
+            >
+              <h1>ne</h1>
+            </div>
+            <div
+              data-block="noble-gases"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ar"
+              data-atomicNumber="18"
+              class="chart-period chart-period-number-3"
+            >
+              <h1>ar</h1>
+            </div>
+            <div
+              data-block="noble-gases"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="kr"
+              data-atomicNumber="36"
+              class="chart-period chart-period-number-4"
+            >
+              <h1>kr</h1>
+            </div>
+            <div
+              data-block="noble-gases"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="ke"
+              data-atomicNumber="54"
+              class="chart-period chart-period-number-5"
+            >
+              <h1>ke</h1>
+            </div>
+            <div
+              data-block="noble-gases"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="rn"
+              data-atomicNumber="86"
+              class="chart-period chart-period-number-6"
+            >
+              <h1>rn</h1>
+            </div>
+            <div
+              data-block="noble-gases"
+              data-color="green"
+              data-head=""
+              data-paragraph=""
+              data-foot=""
+              data-imageURL="red"
+              data-atomicName="og"
+              data-atomicNumber="118"
+              class="chart-period chart-period-number-7"
+            >
+              <h1>og</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ===========  MAIN END ========================= -->
+    </div>
+    <!-- 
+        ==================================================
+     -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="module" src="script.js"></script>
-</body>
-
+  </body>
 </html>

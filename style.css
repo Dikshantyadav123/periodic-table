@@ -2,7 +2,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all ease-in-out 0.21s;
+}
+
+:root {
+    --alkaliMetalsColor: rgb(255, 255, 255);
+    --alkaliMetalsBackgroundColor: rgb(0, 17, 255);
+    /* ======   =================== */
+    --alkaliEarthMetalBackgroundColor: rgb(255, 0, 153);
+    --alkaliEarthMetalColor: rgb(0, 221, 255);
+    /* ======   ================== */
+    --dBlockColor: rgb(33, 2, 2);
+    --dBlockBackgroundColor: #ffff00b4;
+    /* ======   ================= */
+    --groupBackgroundColor: red;
+    --groupColor: rgb(0, 0, 0);
+    /* ===================================== */
+    --periodBackgroundColor: green;
+    --periodColor: red;
+
+    /* === metal ============================ */
+    --metalBackgroundColor: red;
+    --metalColor: rgb(0, 0, 0);
+
+    /* === NON METALS COLOR ============================ */
+    --nonMetalBackgroundColor: rgb(47, 255, 0);
+    --nonMetalColor: rgb(0, 0, 0);
+    /* === METALLOIDS COLOR ============================ */
+    --metalloidsBackgroundColor: rgb(242, 255, 0);
+    --metalloidsColor: rgb(0, 0, 0);
+    /* === HALOGENS COLOR ============================ */
+    --halogensBackgroundColor: rgb(0, 255, 208);
+    --halogensColor: rgb(0, 0, 0);
+    /* ======================================= */
+    --nobleGasesBackgrounColor: rgb(116, 114, 114);
+    --nobleGasesColor: rgb(0, 0, 0);
 }
 
 *::selection {
@@ -14,17 +47,114 @@
     font-family: a;
     src: url(font1.TTF);
 }
+
+@font-face {
+    font-family: b;
+    src: url(fonts/GOBOLD.OTF);
+}
+
+@font-face {
+    font-family: c;
+    src: url(fonts/ARLRDBD.TTF);
+}
+
+
 body {
     background-color: #13011e;
     color: rgb(255, 255, 255);
 }
 
+.theory{
+    height: 100vh;
+    width: 100vw;
+    background-color:transparent;
+    position: fixed;
+    z-index: 999;
+    display: none;
+    top: 0;
+    transition: all ease ease-in-out 2s;
+}
+.theory-cross{
+    position: absolute;
+    top: 90%;
+    right: 50%;
+    transform: translateX(50%);
+    height: 5vw;
+    width: 5vw;
+    border-radius: 50%;
+    background-color: red;
+
+}
 .main {
     width: 100vw;
 }
 
+.show-card {
+    width: 47vw;
+    /* height: 47vh; */
+    position: fixed;
+    border-radius: 1vw;
+    /* background-color: #ffffff; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 999;
+    /* box-shadow: inset 20px 20px 15px rgba(0, 238, 251, 0.2); */
+    opacity: 1;
+    transition: display 2s, opacity 1s, height 0.5s;
+    display: none;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
 
-/* ==== PAGE 2 ======== */
+.show-box {
+    width: 96%;
+    position: relative;
+    /* height: 96%; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    min-height: 30vh;
+    justify-content: space-around;
+    flex-direction: column;
+    mix-blend-mode: difference;
+    color:rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(3px);
+}
+
+.show-box-h {
+    font-family:b;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    font-weight: 799;
+}
+
+.show-box-p {
+    max-width: 90%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 1vw;
+    border-radius: .5vw;
+    font-weight: 799;
+    color: #ffffff;
+    background-color: #252424;
+    padding: .8vw;
+    /* mix-blend-mode: multiply; */
+}
+
+.show-box-f {
+    max-width: 80%;
+    font-family:c;
+    font-size: 1vw;
+    text-transform:uppercase;
+    font-weight: 189;
+    color: rgb(219, 194, 231);
+}
+
+/* ==== PAGE 1 ======== */
 /* ==================== */
 
 .page1 {
@@ -32,7 +162,11 @@ body {
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+
+    background-image: url("photos/kali\ wallpaper.jpg");
+
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,12 +184,13 @@ body {
     overflow: hidden;
     border-radius: 2vw;
     padding: 2vw;
-    background-image: url("kali wallpaper.jpg");
-    /* background-color:cyan; */
+    /* background-image: url("kali wallpaper.jpg");
     background-position: center;
-    background-size: cover;
-    backdrop-filter: blur(1px);
+    background-size: cover; */
+    /* backdrop-filter: blur(2px); */
+    border: 1px solid black;
 }
+/* ==== TOP COLOR COMBINATION ================== */
 .cover {
     position: absolute;
     width: 40vw;
@@ -65,63 +200,77 @@ body {
     left: 50%;
     transform: translateX(-70%);
     /* overflow: hidden; */
-    border-bottom-left-radius:1vw ;border-bottom-right-radius:1vw ;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 2px;
+    
     padding: 1vh 1vw;
-    backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(1px); */
 }
-.cover-box{
+
+.cover-box {
     position: relative;
-    background-color: #fff;
-    width:2.5vw ;
-    height:2.5vw;
+    width: 2.5vw;
+    height: 2.5vw;
     border-radius: 50%;
-    margin: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.cover-number-1{
-    background-color: #0d7997;
+
+.cover-number-1 {
+    background-color: var(--alkaliMetalsBackgroundColor);
 }
-.cover-number-2{
-    background-color: rgba(4, 160, 22, 0.501);
+
+.cover-number-2 {
+    background-color: var(--alkaliEarthMetalBackgroundColor);
 }
-.cover-number-3{
-    background-color: #ffff00b4;;
+
+.cover-number-3 {
+    background-color: var(--dBlockBackgroundColor);
 }
-.cover-number-4{
-    background-color:rgb(163, 60, 171);
+
+.cover-number-4 {
+    background-color: var(--metalBackgroundColor);
 }
-.cover-number-5{
-    background-color: rgb(51, 158, 72);
+
+.cover-number-5 {
+    background-color: var(--metalloidsBackgroundColor);
 }
-.cover-number-6{
-    background-color: rgba(85, 220, 241, 0.666);
+
+.cover-number-6 {
+    background-color: var(--nonMetalBackgroundColor);
 }
-.cover-number-7{
-    background-color: rgba(26, 26, 203, 0.792);
+
+.cover-number-7 {
+    background-color: var(--halogensBackgroundColor);
 }
-.cover-number-8{
-    background-color: #6b3324e3;
+
+.cover-number-8 {
+    background-color: var(--nobleGasesBackgrounColor);
 }
+
 .cover-box:hover .cover-box-text {
-   display: block;
-   width: auto;
-   opacity: 1;
-   padding: 1vw;
-   transition: all ease 1s;
-   height: auto;
-   border-radius: 1vw;
-   backdrop-filter: blur(3px);
+    display: block;
+    width: auto;
+    opacity: 1;
+    padding: 1vw;
+    transition: all ease 1s;
+    height: auto;
+    border-radius: 1vw;
+    /* backdrop-filter: blur(4px); */
+    background-color: #0000006c;
 }
+
 .cover-box:hover {
     border: 2px solid black;
+
+
 }
-.cover-box-text{
+
+.cover-box-text {
     position: absolute;
     top: 150%;
     display: flex;
@@ -130,29 +279,29 @@ body {
     height: 0%;
     margin: 1px;
     /* display: none; */
-    width: 0;overflow: hidden;
+    width: 0;
+    overflow: hidden;
     opacity: 0;
     transition: opacity ease-in 2s;
-    
 }
-.cover-box-text h1{
-    font-family: a ;
+
+.cover-box-text h1 {
+    font-family: a;
     text-transform: capitalize;
     font-weight: 100;
     font-size: 2vw;
 }
 
-
 .chart-group {
-    height: 100%;
+    /* height: 100%; */
     width: 5vw;
-    background-color: #cc303011;
+    /* background-color: #eeee08f3; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .chart-period {
@@ -164,13 +313,17 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    font-family: "Impact Regular";
+    font-family: serif "Impact Regular";
     /* backdrop-filter: blur(10px); */
+    cursor: pointer;
+    transition: all 1s;
+    opacity: 1;
 }
 
 .chart-period h1:hover {
     font-size: 1.8vw;
 }
+
 
 .chart-period:hover {
     box-shadow: inset 8px 8px 14px black;
@@ -180,16 +333,11 @@ body {
     margin-bottom: 20px;
 }
 
-.chart-period-number-7 {
-    background-color: #ff0000a8;
-}
-
 .chart-period-number-0 {
-    background-color: #004169c6;
     margin-bottom: 20px;
 }
 
-.chart-period h1 {
+.chart-period h1,.chart-period h2:hover {
     cursor: pointer;
     width: 100%;
     line-height: 4vw;
@@ -202,152 +350,117 @@ body {
     text-transform: capitalize;
 }
 
-.chart-group-number-3 .chart-period:nth-child(2),
-.chart-group-number-3 .chart-period:nth-child(3),
-.chart-group-number-4 .chart-period:nth-child(2),
-.chart-group-number-4 .chart-period:nth-child(3),
-.chart-group-number-4 .chart-period:nth-child(4),
-.chart-group-number-4 .chart-period:nth-child(5),
-.chart-group-number-5 .chart-period:nth-child(2),
-.chart-group-number-5 .chart-period:nth-child(3),
-.chart-group-number-5 .chart-period:nth-child(4),
-.chart-group-number-5 .chart-period:nth-child(5),
-.chart-group-number-6 .chart-period:nth-child(2),
-.chart-group-number-6 .chart-period:nth-child(3),
-.chart-group-number-6 .chart-period:nth-child(4),
-.chart-group-number-6 .chart-period:nth-child(5),
-.chart-group-number-7 .chart-period:nth-child(2),
-.chart-group-number-7 .chart-period:nth-child(3),
-.chart-group-number-7 .chart-period:nth-child(4),
-.chart-group-number-7 .chart-period:nth-child(5),
-.chart-group-number-8 .chart-period:nth-child(2),
-.chart-group-number-8 .chart-period:nth-child(3),
-.chart-group-number-8 .chart-period:nth-child(4),
-.chart-group-number-8 .chart-period:nth-child(5),
-.chart-group-number-9 .chart-period:nth-child(2),
-.chart-group-number-9 .chart-period:nth-child(3),
-.chart-group-number-9 .chart-period:nth-child(4),
-.chart-group-number-9 .chart-period:nth-child(5),
-.chart-group-number-10 .chart-period:nth-child(2),
-.chart-group-number-10 .chart-period:nth-child(3),
-.chart-group-number-10 .chart-period:nth-child(4),
-.chart-group-number-10 .chart-period:nth-child(5),
-.chart-group-number-11 .chart-period:nth-child(2),
-.chart-group-number-11 .chart-period:nth-child(3),
-.chart-group-number-11 .chart-period:nth-child(4),
-.chart-group-number-11 .chart-period:nth-child(5),
-.chart-group-number-12 .chart-period:nth-child(2),
-.chart-group-number-12 .chart-period:nth-child(3),
-.chart-group-number-12 .chart-period:nth-child(4),
-.chart-group-number-12 .chart-period:nth-child(5) {
-    background-color: #ffff00b4;
-    color: #000000;
-    /* backdrop-filter: blur(2px); */
-    
+/*====== COLOR COMBINATION IN PERIODIC TABLE ========================== */
+/*  ====  GROUP BLOCK COLOR ======================= */
+div [data-block="group-block"] {
+    background-color: var(--groupBackgroundColor);
+    color: var(--groupColor);
 }
 
-.chart-group-number-14 .chart-period:nth-child(2),
-.chart-group-number-15 .chart-period:nth-child(2),
-.chart-group-number-15 .chart-period:nth-child(3),
-.chart-group-number-16 .chart-period:nth-child(2),
-.chart-group-number-16 .chart-period:nth-child(3),
-.chart-group-number-16 .chart-period:nth-child(4) {
-    background-color: rgba(85, 220, 241, 0.756);
-    color: #000000;
-    /* backdrop-filter: blur(2px); */
+div [data-block="group-block"]:hover {
+    background-color: var(--groupColor);
+    color: var(--groupBackgroundColor);
 }
 
-.chart-group-number-18 .chart-period:nth-child(2),
-.chart-group-number-18 .chart-period:nth-child(3),
-.chart-group-number-18 .chart-period:nth-child(4),
-.chart-group-number-18 .chart-period:nth-child(5),
-.chart-group-number-18 .chart-period:nth-child(6),
-.chart-group-number-18 .chart-period:nth-child(7),
-.chart-group-number-18 .chart-period:nth-child(8) {
-    background-color: rgba(233, 75, 12, 0.501);
-    color: #000000;
-    /* backdrop-filter: blur(2px); */
+/* ==== PERIOD BLOCKS COLOR ==================================== */
+div [data-block="period-block"] {
+    background-color: var(--periodBackgroundColor);
+    color: var(--periodColor);
 }
 
-.chart-group-number-13 .chart-period:nth-child(2),
-.chart-group-number-14 .chart-period:nth-child(3),
-.chart-group-number-14 .chart-period:nth-child(4),
-.chart-group-number-15 .chart-period:nth-child(4),
-.chart-group-number-15 .chart-period:nth-child(5),
-.chart-group-number-16 .chart-period:nth-child(5),
-.chart-group-number-16 .chart-period:nth-child(6) {
-    background-color: rgba(12, 233, 64, 0.501);
-    color: #000000;
-    /* backdrop-filter: blur(2px); */
+div [data-block="period-block"]:hover {
+    background-color: var(--periodColor);
+    color: var(--periodBackgroundColor);
 }
 
-.chart-group-number-13 .chart-period:nth-child(3),
-.chart-group-number-13 .chart-period:nth-child(4),
-.chart-group-number-13 .chart-period:nth-child(5),
-.chart-group-number-13 .chart-period:nth-child(6),
-.chart-group-number-13 .chart-period:nth-child(7),
-.chart-group-number-14 .chart-period:nth-child(5),
-.chart-group-number-14 .chart-period:nth-child(6),
-.chart-group-number-14 .chart-period:nth-child(7),
-.chart-group-number-15 .chart-period:nth-child(6),
-.chart-group-number-15 .chart-period:nth-child(7),
-.chart-group-number-16 .chart-period:nth-child(7) {
-    background-color: rgba(207, 12, 233, 0.501);
-    color: #000000;
-    /* backdrop-filter: blur(2px); */
+/* ==== ALKALI METAL , GROUP 1  =========================================== */
+
+div [data-block="alkali-metal"] {
+    background-color: var(--alkaliMetalsBackgroundColor);
+    color: var(--alkaliMetalsColor);
 }
 
-.chart-group-number-17 .chart-period:nth-child(2),
-.chart-group-number-17 .chart-period:nth-child(3),
-.chart-group-number-17 .chart-period:nth-child(4),
-.chart-group-number-17 .chart-period:nth-child(5),
-.chart-group-number-17 .chart-period:nth-child(6),
-.chart-group-number-17 .chart-period:nth-child(7) {
-    background-color: rgba(31, 12, 233, 0.501);
-    color: #000000;
-    /* backdrop-filter: blur(2px); */
+div [data-block="alkali-metal"]:hover {
+    background-color: var(--alkaliMetalsColor);
+    color: var(--alkaliMetalsBackgroundColor);
 }
 
-.chart-group-number-1 .chart-period:nth-child(2),
-.chart-group-number-1 .chart-period:nth-child(3),
-.chart-group-number-1 .chart-period:nth-child(4),
-.chart-group-number-1 .chart-period:nth-child(5),
-.chart-group-number-1 .chart-period:nth-child(6),
-.chart-group-number-1 .chart-period:nth-child(7),
-.chart-group-number-1 .chart-period:nth-child(8) {
-    background-color: rgba(12, 200, 233, 0.501);
-    color: #000000;
-    /* backdrop-filter: blur(2px); */
+/*===== ALKALI EARTH METALS , GROUP 2  ==================================================== */
+
+div [data-block="alkali-earth-metal"] {
+    background-color: var(--alkaliEarthMetalBackgroundColor);
+    color: var(--alkaliEarthMetalColor);
 }
 
-.chart-group-number-2 .chart-period:nth-child(2),
-.chart-group-number-2 .chart-period:nth-child(3),
-.chart-group-number-2 .chart-period:nth-child(4),
-.chart-group-number-2 .chart-period:nth-child(5),
-.chart-group-number-2 .chart-period:nth-child(6),
-.chart-group-number-2 .chart-period:nth-child(7) {
-    background-color: rgba(4, 160, 22, 0.501);
-    color: #000000;
-    /* backdrop-filter: blur(2px); */
-}
- /*=====================================================  */
-/* =====  HOVER ======================================== */
-.chart-group-number-14 .chart-period:nth-child(2):hover,
-.chart-group-number-15 .chart-period:nth-child(2):hover,
-.chart-group-number-15 .chart-period:nth-child(3):hover,
-.chart-group-number-16 .chart-period:nth-child(2):hover,
-.chart-group-number-16 .chart-period:nth-child(3):hover,
-.chart-group-number-16 .chart-period:nth-child(4):hover {
-    background-color: #ff0000;
-    box-shadow: inset 8px 8px 14px rgb(35, 35, 35);
-    color: #ffffff;
+div [data-block="alkali-earth-metal"]:hover {
+    background-color: var(--alkaliEarthMetalColor);
+    color: var(--alkaliEarthMetalBackgroundColor);
 }
 
-.chart-group-number-0 div:nth-child(5):hover {
-    background-color: #08820e;
+/* ======= D BLOCKS ELEMENTS  COLOR ==============================  */
+div [data-block="d-block"] {
+    background-color: var(--dBlockBackgroundColor);
+    color: var(--dBlockColor);
 }
 
-.chart-period:hover {
-    background-color: #fff;
-    color: #060024;
+div [data-block="d-block"]:hover {
+    background-color: var(--dBlockColor);
+    color: var(--dBlockBackgroundColor);
+}
+
+/* =======  metal ELEMENTS  COLOR ==============================  */
+div [data-block="metal"] {
+    background-color: var(--metalBackgroundColor);
+    color: var(--metalColor);
+}
+
+div [data-block="metal"]:hover {
+    background-color: var(--metalColor);
+    color: var(--metalBackgroundColor);
+}
+
+/* =======  METALLOIDS ELEMENTS  COLOR ==============================  */
+div [data-block="metalloids"] {
+    background-color: var(--metalloidsBackgroundColor);
+    color: var(--metalloidsColor);
+}
+
+div [data-block="metalloids"]:hover {
+    background-color: var(--metalloidsColor);
+    color: var(--metalloidsBackgroundColor);
+}
+
+/* =======  NON METALS ELEMENTS  COLOR ==============================  */
+div [data-block="non-metal"] {
+    background-color: var(--nonMetalBackgroundColor);
+    color: var(--nonMetalColor);
+}
+
+div [data-block="non-metal"]:hover {
+    background-color: var(--nonMetalColor);
+    color: var(--nonMetalBackgroundColor);
+}
+
+/* ====  HALOGENS  ELEMENT COLOR    ================================== */
+div [data-block="halogens"] {
+    background-color: var(--halogensBackgroundColor);
+    color: var(--halogensColor);
+    transition: all ease-in 0.21s;
+}
+
+div [data-block="halogens"]:hover {
+    background-color: var(--halogensColor);
+    color: var(--halogensBackgroundColor);
+}
+
+/* ====  NOBLE GASSES ELEMENT COLOR    ================================== */
+div [data-block="noble-gases"] {
+    background-color: var(--nobleGasesBackgrounColor);
+    color: var(--nobleGasesColor);
+    transition: all ease-in 0.21s;
+}
+
+div [data-block="noble-gases"]:hover {
+    background-color: var(--nobleGasesColor);
+    color: var(--nobleGasesBackgrounColor);
 }
